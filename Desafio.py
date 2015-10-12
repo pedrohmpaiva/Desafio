@@ -1,9 +1,15 @@
 ##Começar com while pois ao final da venda o usuário deverar escolher se vai querer continuar ou sair (Opção 6)
 ##Como não sabemos o número de vezes usuários irão comprar ou cancelar as vendas, iremos usar "while" e não "for"!
+saida = 0
+populacao = [1]
+quantidade_assentos = 0
+a = 1111111111
 
-while True 
+assento = [['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-']]
+
+while  saida == 0:
 	##Visualização primaria do programa
-	
+
 	print ('---------------------------')
 	print ('  SALA DE CINEMA – CINEPÊ  ')
 	print ('---------------------------')
@@ -13,27 +19,133 @@ while True
 	print ('4- CANCELAR VENDA')
 	print ('5- INICIAR NOVA SESSÃO')
 	print ('6- SAIR')
-	opçao = input( print ('OPÇÃO DESEJADA:'))
+	opçao = input ('OPÇÃO DESEJADA: ')
+	print ()
 
 	## Opção ('1- EXIBIR MAPA DA SALA')
+	if opçao == '1':
+		'''
 
-if opçao == '1':
+		if quantidade de assentos == 0:
+			print ('---------------------------')
+			print ('  SALA DE CINEMA – CINEPÊ  ')
+			print ('---------------------------')
+			print ('        MAPA DA SALA       ')
+			print ('     A B C D E F G H I J   ')
+			print ('  0
+			input ('PRESSIONE QUALQUER TECLA1 - - - - - - - - - -')
+			print ('  02 - - - - - - - - - -')
+			print ('  03 - - - - - - - - - -')
+			print ('  04 - - - - - - - - - -')
+			print ('  05 - - - - - - - - - -')
+			print ('  06 - - - - - - - - - -')
+			print ('  07 - - - - - - - - - -')
+			print ('  08 - - - - - - - - - -')
+			print ('  09 - - - - - - - - - -')
+			print ('  10 - - - - - - - - - -') PARA VOLTAR...')
+			'''
 
-	print ('---------------------------')
-	print ('  SALA DE CINEMA – CINEPÊ  ')
-	print ('---------------------------')
-	print ('        MAPA DA SALA       ')
-	print ('     A B C D E F G H I J   ')
-	print ('  01 - - - - - - - x - -   ')
-	print ('  02 x x - - x - - - x -   ')
-	print ('  03 - x x - x - x x - -   ')
-	print ('  04 - - - - x - - x - -   ')
-	print ('  05 - x - x - - - x - x   ')
-	print ('  06 - x - - x x - x x -   ')
-	print ('  07 - x - - - - - x x -   ')
-	print ('  08 x x x - x - - - - x   ')
-	print ('  09 - x x x x - - x - x   ')
-	print ('  10 x x x x x x - x - -   ')
-	print (PRESSIONE QUALQUER TECLA PARA VOLTAR...
-		
-break
+
+		print ('---------------------------')
+		print ('  SALA DE CINEMA – CINEPÊ  ')
+		print ('---------------------------')
+		print ('        MAPA DA SALA       ')
+		print ('     A B C D E F G H I J')
+		print ('  01 %s %s %s %s %s %s %s %s %s %s' %(assento [0] [0],assento [0] [1],assento [0] [2],assento [0] [3],assento [0] [4],assento [0] [5],assento [0] [6],assento [0] [7],assento [0] [8],assento [0] [9],))
+		print ('  02 %s %s %s %s %s %s %s %s %s %s' %(assento [1] [0],assento [1] [1],assento [1] [2],assento [1] [3],assento [1] [4],assento [1] [5],assento [1] [6],assento [1] [7],assento [1] [8],assento [1] [9],))
+		print ('  03 %s %s %s %s %s %s %s %s %s %s' %(assento [2] [0],assento [2] [1],assento [2] [2],assento [2] [3],assento [2] [4],assento [2] [5],assento [2] [6],assento [2] [7],assento [2] [8],assento [2] [9],))
+		print ('  04 %s %s %s %s %s %s %s %s %s %s' %(assento [3] [0],assento [3] [1],assento [3] [2],assento [3] [3],assento [3] [4],assento [3] [5],assento [3] [6],assento [3] [7],assento [3] [8],assento [3] [9],))
+		print ('  05 %s %s %s %s %s %s %s %s %s %s' %(assento [4] [0],assento [4] [1],assento [4] [2],assento [4] [3],assento [4] [4],assento [4] [5],assento [4] [6],assento [4] [7],assento [4] [8],assento [4] [9],))
+		print ('  06 %s %s %s %s %s %s %s %s %s %s' %(assento [5] [0],assento [5] [1],assento [5] [2],assento [5] [3],assento [5] [4],assento [5] [5],assento [5] [6],assento [5] [7],assento [5] [8],assento [5] [9],))
+		print ('  07 %s %s %s %s %s %s %s %s %s %s' %(assento [6] [0],assento [6] [1],assento [6] [2],assento [6] [3],assento [6] [4],assento [6] [5],assento [6] [6],assento [6] [7],assento [6] [8],assento [6] [9],))
+		print ('  08 %s %s %s %s %s %s %s %s %s %s' %(assento [7] [0],assento [7] [1],assento [7] [2],assento [7] [3],assento [7] [4],assento [7] [5],assento [7] [6],assento [7] [7],assento [7] [8],assento [7] [9],))
+		print ('  09 %s %s %s %s %s %s %s %s %s %s' %(assento [8] [0],assento [8] [1],assento [8] [2],assento [8] [3],assento [8] [4],assento [8] [5],assento [8] [6],assento [8] [7],assento [8] [8],assento [8] [9],))
+		print ('  10 %s %s %s %s %s %s %s %s %s %s' %(assento [9] [0],assento [9] [1],assento [9] [2],assento [9] [3],assento [9] [4],assento [9] [5],assento [9] [6],assento [9] [7],assento [9] [8],assento [9] [9],))
+
+		input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
+
+
+	elif opçao == '2':
+		pass
+
+	elif opçao == '3':
+
+		#A variavel quantidade_de_assento ira controlar a quantidade de asssentos disponiveis.
+
+		if quantidade_assentos <= 10:
+
+
+			pessoa = ['','','']
+
+			# As listas pessa e assento são apenas lista temporarias para que seus dados sejão integrados as pseudo listas populacao e mapa_sala
+
+			fileira = int( input ('FILEIRA: '))
+			poltrona = input ('POLTRONA: ')
+
+
+			if poltrona == "A" or poltrona == 'a':
+				poltrona = 0
+
+			elif poltrona == "B" or poltrona == 'b':
+				poltrona = 1
+
+			elif poltrona == "C" or poltrona == 'b':
+				poltrona = 2
+
+			elif poltrona == "D" or poltrona == 'c':
+				poltrona = 3
+
+			elif poltrona == "E" or poltrona == 'e':
+				poltrona = 4
+
+			elif poltrona == "F" or poltrona == 'f':
+				poltrona = 5
+
+			elif poltrona == "G" or poltrona == 'g':
+				poltrona = 6
+
+			elif poltrona == "H" or poltrona == 'h':
+				poltrona = 7
+
+			elif poltrona == "I" or poltrona == 'i':
+				poltrona = 8
+
+			elif poltrona == "J" or poltrona == 'j':
+				poltrona = 9
+
+			# A segunda coordenada da lista assento é referente ao local que sempre ira armazenar o caracter "x" em cada uma das sublistas.
+
+				assento [fileira - 1] [poltrona] = 'x'
+				a = 2222222222
+
+
+			'''
+			cliente = input ('CLIENTE: ')
+			pessoa [1] = cliente
+
+
+			estudante = ('ESTUDANTE (S/N): ')
+			if estudante == 's' or estudante == 'S' or estudante == 'n' or estudante 'N'
+
+			pessoa [3] = estudante
+
+			populacao.append (pessoa)
+
+			quantidade_assentos = quantidade_assentos + 1
+
+			'''
+		else :
+			print ('TODAS AS POUTRONAS ESTÃO RESERVADAS!!!')
+
+
+		input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
+
+
+	elif opçao == '4':
+		pass
+	elif opçao == '5':
+		pass
+	elif opçao == '6':
+		saida = 1
+	else:
+		input ("OPEÇÃO INCORRENTA! ESCOLHA UM DAS OPÇÃO ACIMA")

@@ -1,14 +1,10 @@
 ##Começar com while pois ao final da venda o usuário deverar escolher se vai querer continuar ou sair (Opção 6)
 ##Como não sabemos o número de vezes usuários irão comprar ou cancelar as vendas, iremos usar "while" e não "for"!
 saida = 0
-populacao = [1]
-quantidade_assentos = 0
-a = 1111111111
-
 assento = [['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-']]
-
+populacao = [[['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']]]
 while  saida == 0:
-	##Visualização primaria do programa
+        ##Visualização primária do programa
 
 	print ('---------------------------')
 	print ('  SALA DE CINEMA – CINEPÊ  ')
@@ -21,30 +17,8 @@ while  saida == 0:
 	print ('6- SAIR')
 	opçao = input ('OPÇÃO DESEJADA: ')
 	print ()
-
-	## Opção ('1- EXIBIR MAPA DA SALA')
+	
 	if opçao == '1':
-		'''
-
-		if quantidade de assentos == 0:
-			print ('---------------------------')
-			print ('  SALA DE CINEMA – CINEPÊ  ')
-			print ('---------------------------')
-			print ('        MAPA DA SALA       ')
-			print ('     A B C D E F G H I J   ')
-			print ('  0
-			input ('PRESSIONE QUALQUER TECLA1 - - - - - - - - - -')
-			print ('  02 - - - - - - - - - -')
-			print ('  03 - - - - - - - - - -')
-			print ('  04 - - - - - - - - - -')
-			print ('  05 - - - - - - - - - -')
-			print ('  06 - - - - - - - - - -')
-			print ('  07 - - - - - - - - - -')
-			print ('  08 - - - - - - - - - -')
-			print ('  09 - - - - - - - - - -')
-			print ('  10 - - - - - - - - - -') PARA VOLTAR...')
-			'''
-
 
 		print ('---------------------------')
 		print ('  SALA DE CINEMA – CINEPÊ  ')
@@ -63,89 +37,130 @@ while  saida == 0:
 		print ('  10 %s %s %s %s %s %s %s %s %s %s' %(assento [9] [0],assento [9] [1],assento [9] [2],assento [9] [3],assento [9] [4],assento [9] [5],assento [9] [6],assento [9] [7],assento [9] [8],assento [9] [9],))
 
 		input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
-
-
+		
 	elif opçao == '2':
-		pass
+                
+		fileira = int( input ('Digite o número de uma FILEIRA (1 - 10): '))
+		poltrona = input ('Digitea leira de uma FILEIRAPOLTRONA (A - J): ')
 
+		if poltrona == "A" or poltrona == 'a':
+			poltrona = 0
+		elif poltrona == "B" or poltrona == 'b':
+			poltrona = 1
+		elif poltrona == "C" or poltrona == 'b':
+			poltrona = 2
+		elif poltrona == "D" or poltrona == 'c':
+			poltrona = 3
+		elif poltrona == "E" or poltrona == 'e':
+			poltrona = 4
+		elif poltrona == "F" or poltrona == 'f':
+			poltrona = 5
+		elif poltrona == "G" or poltrona == 'g':
+			poltrona = 6
+		elif poltrona == "H" or poltrona == 'h':
+			poltrona = 7
+		elif poltrona == "I" or poltrona == 'i':
+			poltrona = 8
+		elif poltrona == "J" or poltrona == 'j':
+			poltrona = 9
+		if fileira > 10 or assento [fileira -1] [poltrona] == '-':
+			print ('ERRO! POLTRONA NÃO RESERVADA OU NÃO EXISTENTE')
+		else:
+			print ('CLIENTE: %s' %populacao [fileira -1] [poltrona] [0])
+			print ('ESTUDANTE: %s' %populacao [fileira -1] [poltrona] [1])
+			input (' PRESSIONE QUALQUER TECLA PARA VOLTAR... ')
+			
 	elif opçao == '3':
 
-		#A variavel quantidade_de_assento ira controlar a quantidade de asssentos disponiveis.
+		fileira = int( input ('FILEIRA: '))
+		poltrona = input ('POLTRONA: ')
 
-		if quantidade_assentos <= 10:
-
-
-			pessoa = ['','','']
-
-			# As listas pessa e assento são apenas lista temporarias para que seus dados sejão integrados as pseudo listas populacao e mapa_sala
-
-			fileira = int( input ('FILEIRA: '))
-			poltrona = input ('POLTRONA: ')
-
-
-			if poltrona == "A" or poltrona == 'a':
-				poltrona = 0
-
-			elif poltrona == "B" or poltrona == 'b':
-				poltrona = 1
-
-			elif poltrona == "C" or poltrona == 'b':
-				poltrona = 2
-
-			elif poltrona == "D" or poltrona == 'c':
-				poltrona = 3
-
-			elif poltrona == "E" or poltrona == 'e':
-				poltrona = 4
-
-			elif poltrona == "F" or poltrona == 'f':
-				poltrona = 5
-
-			elif poltrona == "G" or poltrona == 'g':
-				poltrona = 6
-
-			elif poltrona == "H" or poltrona == 'h':
-				poltrona = 7
-
-			elif poltrona == "I" or poltrona == 'i':
-				poltrona = 8
-
-			elif poltrona == "J" or poltrona == 'j':
-				poltrona = 9
-
-			# A segunda coordenada da lista assento é referente ao local que sempre ira armazenar o caracter "x" em cada uma das sublistas.
-
-				assento [fileira - 1] [poltrona] = 'x'
-				a = 2222222222
+		if poltrona == "A" or poltrona == 'a':
+			poltrona = 0
+		elif poltrona == "B" or poltrona == 'b':
+			poltrona = 1
+		elif poltrona == "C" or poltrona == 'b':
+			poltrona = 2
+		elif poltrona == "D" or poltrona == 'c':
+			poltrona = 3
+		elif poltrona == "E" or poltrona == 'e':
+			poltrona = 4
+		elif poltrona == "F" or poltrona == 'f':
+			poltrona = 5
+		elif poltrona == "G" or poltrona == 'g':
+			poltrona = 6
+		elif poltrona == "H" or poltrona == 'h':
+			poltrona = 7
+		elif poltrona == "I" or poltrona == 'i':
+			poltrona = 8
+		elif poltrona == "J" or poltrona == 'j':
+			poltrona = 9
 
 
-			'''
+		if assento [fileira - 1] [poltrona] == 'x' or fileira >= 11:
+			#Verifica se a poltrona existe ou se já esta reservada
+			 print ('ERRO! POLTRONA NÃO EXISTENTE OU JÁ RESERVADA')
+		else:
 			cliente = input ('CLIENTE: ')
-			pessoa [1] = cliente
+			estudante = input ('ESTUDANTE (S/N): ')
+			if estudante == 's':
+				estudante = 'SIM'
+			elif estudante == 'n':
+				estudante = 'NÃO'
 
-
-			estudante = ('ESTUDANTE (S/N): ')
-			if estudante == 's' or estudante == 'S' or estudante == 'n' or estudante 'N'
-
-			pessoa [3] = estudante
-
-			populacao.append (pessoa)
-
-			quantidade_assentos = quantidade_assentos + 1
-
-			'''
-		else :
-			print ('TODAS AS POUTRONAS ESTÃO RESERVADAS!!!')
-
-
-		input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
-
-
-	elif opçao == '4':
-		pass
+			assento [fileira - 1] [poltrona] = 'x'
+			#Primeira modificação em populacao sera para nome do cliente
+			populacao [fileira -1] [poltrona] [0] = cliente
+			#Segunda modificação sera para se o cliente é estudante
+			populacao [fileira -1] [poltrona] [1] = "%s" %(estudante)
+			input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
+	
 	elif opçao == '5':
-		pass
+		confirmacao = input ('CONFIRMAR NOVA SESSÃO (S/N): ')
+		if confirmacao == 's' or confirmacao == 'S':
+			assento = [['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-']]
+			populacao = [[['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']], [['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-'], ['-', '-']]]
+			print ('NOVA SESSÃO INICIADA!')
+			input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
+		else:
+			pass
 	elif opçao == '6':
 		saida = 1
+		
 	else:
 		input ("OPEÇÃO INCORRENTA! ESCOLHA UM DAS OPÇÃO ACIMA")
+'''         elif opçao == '4':
+		fileira = int( input ('FILEIRA: '))
+                        poltrona = input ('POLTRONA: ')
+		if poltrona == "A" or poltrona == 'a':
+			poltrona = 0
+		elif poltrona == "B" or poltrona == 'b':
+			poltrona = 1
+		elif poltrona == "C" or poltrona == 'b':
+			poltrona = 2
+		elif poltrona == "D" or poltrona == 'c':
+			poltrona = 3
+		elif poltrona == "E" or poltrona == 'e':
+			poltrona = 4
+		elif poltrona == "F" or poltrona == 'f':
+			poltrona = 5
+		elif poltrona == "G" or poltrona == 'g':
+			poltrona = 6
+		elif poltrona == "H" or poltrona == 'h':
+			poltrona = 7
+		elif poltrona == "I" or poltrona == 'i':
+			poltrona = 8
+		elif poltrona == "J" or poltrona == 'j':
+			poltrona = 9
+                        if assento [fileira -1] [poltrona] == 'x':
+                                confirmacao = input ('CONFIRMAR CANCELAMENTO (S/N): ')
+                                if confirmacao == 'S' or confirmacao == 's':
+                                        assento [fileira -1] [poltrona] = '-'
+                                        populacao [fileira -1] [poltrona] [0] = '-'
+                                        populacao [fileira -1] [poltrona] [1] = '-'
+                                        input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
+                                else:
+                                        print ()
+                        else:
+                                print ('ERRO! ASSENTO NÃO ESTA RESERVADO')
+'''        

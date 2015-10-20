@@ -23,10 +23,10 @@ Exibir um mapa da sala do cinema, onde as poltronas livres serão sinalizadas co
 poltronas reservadas com o caractere “x”, como ilustrado a seguir:
 ```objc
 ---------------------------
-SALA DE CINEMA – CINEPÊ
+  SALA DE CINEMA – CINEPÊ
 ---------------------------
-MAPA DA SALA
-A B C D E F G H I J
+      MAPA DA SALA
+   A B C D E F G H I J
 01 - - - - - - - x - -
 02 x x - - x - - - x -
 03 - x x - x - x x - -

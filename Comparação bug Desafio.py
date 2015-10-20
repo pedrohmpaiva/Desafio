@@ -10,7 +10,7 @@ quantidade_poltronafmt = quantidade_poltrona #Variavel usada para apresentar ao 
 quantidade_poltrona = ord (quantidade_poltrona) - ord ('A') + 1
 
 #Lista que vai conter representação do caracter '-', para assento vazio, e 'x para assento reservado'
-assento = []
+assento = [] #Lista que vai conter representação do caracter '-', para assento vazio, e 'x para assento reservado'
 
 for icoluna in range (quantidade_fileira):
     coluna = []
@@ -19,8 +19,8 @@ for icoluna in range (quantidade_fileira):
         coluna.append (poltrona)
     assento.append (coluna)
 
-#Lista para dados das pessoas que iram ocupar os assentos
-populacao = []
+
+populacao = [] #Lista para dados das pessoas que iram ocupar os assentos
 
 for icoluna in range (quantidade_fileira):
     coluna = []
@@ -194,27 +194,28 @@ while  not saida:
         elif opçao == '5':
 
                 confirmacao = input ('CONFIRMAR NOVA SESSÃO (S/N): ')
-
                 if confirmacao == 's' or confirmacao == 'S':
-                        for icoluna in range (quantidade_fileira):
-                            linha = []
-                            for ipoltrona in range (quantidade_poltrona):
-                                poltrona = '-'
-                                linha.append (poltrona)
-                            assento.append (linha)
+                    assento = [] #Lista para dados das pessoas que iram ocupar os assentos
+                    for icoluna in range (quantidade_fileira):
+                        coluna = []
+                        for ipoltrona in range (quantidade_poltrona):
+                            poltrona = '-'
+                            coluna.append (poltrona)
+                        assento.append (coluna)
 
+                    #Lista para dados das pessoas que iram ocupar os assentos
+                    populacao = []
+                    for icoluna in range (quantidade_fileira):
+                        coluna = []
+                        for ipoltrona in range (quantidade_poltrona):
+                            nome_estudante = ['-','-']
+                            coluna.append (nome_estudante)
+                        populacao.append (coluna)
 
-                        for icoluna in range (quantidade_fileira):
-                            linha = []
-                            for ipoltrona in range (quantidade_poltrona):
-                                poltrona = ['-','-']
-                                linha.append (poltrona)
-                            populacao.append (linha)
-
-                        print ('NOVA SESSÃO INICIADA!')
-                        input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
+                    print ('NOVA SESSÃO INICIADA!')
+                    input ('PRESSIONE QUALQUER TECLA PARA VOLTAR...')
                 else:
-                        pass
+                    pass
 
         elif opçao == '6':
                 saida = True
